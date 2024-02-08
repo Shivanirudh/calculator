@@ -28,7 +28,7 @@ pipeline {
         stage('Push Docker Images') {
             steps {
                 script{
-                    docker.withRegistry('', 'DockerHubCreds') {
+                    docker.withDockerRegistry('', 'DockerHubCreds') {
                     sh 'docker tag calculator Shivanirudh/calculator:latest'
                     sh 'docker push Shivanirudh/calculator'
                     }
