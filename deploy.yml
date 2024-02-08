@@ -8,8 +8,8 @@
   tasks:
     - name: ensure required pip-packages are installed
       pip:
-      name:
-        - docker>=1.8.0
+        name:
+          - docker>=1.8.0
     - name: Pull Docker Image
       docker_image:
         name: "shivanirudh/calculator"
