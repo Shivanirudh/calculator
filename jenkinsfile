@@ -29,8 +29,8 @@ pipeline {
             steps {
                 script{
                     docker.withRegistry('', 'DockerHubCreds') {
-                    sh 'docker tag calculator Shivanirudh/calculator:latest'
-                    sh 'docker push Shivanirudh/calculator'
+                    sh 'docker tag calculator shivanirudh/calculator:latest'
+                    sh 'docker push shivanirudh/calculator'
                     }
                  }
             }
