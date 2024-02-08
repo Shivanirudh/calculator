@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE_NAME = 'calculator'
+        DOCKER_IMAGE_NAME = 'v_0.0.1'
         GITHUB_REPO_URL = 'https://github.com/Shivanirudh/calculator.git'
     }
 
