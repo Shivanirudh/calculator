@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE_NAME = 'calculator:v_0.0.1'
+        DOCKER_IMAGE_NAME = 'pycalculator:v_0.1'
         GITHUB_REPO_URL = 'https://github.com/Shivanirudh/calculator.git'
     }
 
@@ -29,8 +29,8 @@ pipeline {
             steps {
                 script{
                     docker.withRegistry('', 'DockerHubCreds') {
-                    sh 'docker tag calculator shivanirudh/calculator:latest'
-                    sh 'docker push shivanirudh/calculator'
+                    sh 'docker tag calculator shivanirudh/pycalculator:latest'
+                    sh 'docker push shivanirudh/pycalculator'
                     }
                  }
             }
