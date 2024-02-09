@@ -12,7 +12,7 @@
           - docker>=1.8.0
     - name: Pull Docker Image
       docker_image:
-        name: "shivanirudh/calculator"
+        name: "shivanirudh/pycalculator"
         source: pull
       register: docker_pull_result
 
@@ -25,4 +25,4 @@
         name: docker
         state: started
     - name: Running container
-      shell: docker run -it -d --name calculator shivanirudh/calculator
+      shell: docker run -it -d --name pycalculator shivanirudh/pycalculator
